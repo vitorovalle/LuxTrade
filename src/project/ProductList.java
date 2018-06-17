@@ -19,14 +19,16 @@ public class ProductList {
     private int quantidade;
     private String descricao;
     private String imagem;
+    private String notaprocel;
 
-    public ProductList(String marca, String modelo, int preco, int quantidade, String descricao, String imagem) {
+    public ProductList(String marca, String modelo, int preco, int quantidade, String descricao, String imagem, String notaprocel) {
         this.marca = marca;
         this.modelo = modelo;
         this.preco = preco;
         this.quantidade = quantidade;
         this.descricao = descricao;
         this.imagem = imagem;
+        this.notaprocel = notaprocel;
     }
 
     public String getMarca() {
@@ -76,6 +78,14 @@ public class ProductList {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+    
+    public String getNotaProcel() {
+        return notaprocel;
+    }
+    
+    public void setNotaProcel(String notaprocel){
+        this.notaprocel = notaprocel;
     }
     
     

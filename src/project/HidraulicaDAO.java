@@ -22,12 +22,12 @@ import javax.swing.JOptionPane;
  */
 public class HidraulicaDAO {
     public static boolean flag = false;
-    public static void lancarHidraulica(String marca, String modelo, int preco, int quantidade, String descricao, String imagem){
+    public static void lancarHidraulica(String marca, String modelo, int preco, int quantidade, String descricao, String imagem, int precoaquisicao, String notaprocel){
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/hidraulicaDB.db");
          
             PreparedStatement ps = con.prepareStatement("INSERT INTO hidraulica(marca, modelo, preco,"
-                    + "quantidade, descricao, imagem) VALUES(?,?,?,?,?,?)");
+                    + "quantidade, descricao, imagem, precoaquisicao, notaprocel) VALUES(?,?,?,?,?,?,?,?)");
             
             ps.setString(1, marca);
             ps.setString(2, modelo);
@@ -35,6 +35,9 @@ public class HidraulicaDAO {
             ps.setInt(4, quantidade);
             ps.setString(5, descricao);
             ps.setString(6, imagem);
+            ps.setInt(7, precoaquisicao);
+            ps.setString(8, notaprocel);
+            
             if(ps.executeUpdate()==1)
                 JOptionPane.showMessageDialog(null, "Registro efetivado!");
             
@@ -70,14 +73,14 @@ public class HidraulicaDAO {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/hidraulicaDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT marca, modelo, preco, quantidade, descricao, imagem FROM hidraulica");
+            ResultSet rs = ps.executeQuery("SELECT marca, modelo, preco, quantidade, descricao, imagem, notaprocel FROM hidraulica");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("marca"),rs.getString("modelo"),
                         rs.getInt("preco"),rs.getInt("quantidade"),rs.getString("descricao"),
-                        rs.getString("imagem"));
+                        rs.getString("imagem"),rs.getString("notaprocel"));
                 
                 list.add(pl);
 
@@ -93,14 +96,14 @@ public class HidraulicaDAO {
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/hidraulicaDB.db");
             Statement ps = con.createStatement();
-            ResultSet rs = ps.executeQuery("SELECT marca, modelo, preco, quantidade, descricao, imagem FROM hidraulica ORDER BY id DESC LIMIT 3");
+            ResultSet rs = ps.executeQuery("SELECT marca, modelo, preco, quantidade, descricao, imagem, notaprocel FROM hidraulica ORDER BY id DESC LIMIT 3");
             
             ProductList pl;
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("marca"),rs.getString("modelo"),
                         rs.getInt("preco"),rs.getInt("quantidade"),rs.getString("descricao"),
-                        rs.getString("imagem"));
+                        rs.getString("imagem"),rs.getString("notaprocel"));
                 
                 list.add(pl);
 
@@ -123,7 +126,7 @@ public class HidraulicaDAO {
             
             while(rs.next()){
                 pl = new ProductList(rs.getString("marca"),rs.getString("modelo"),
-                        0, rs.getInt("quantidade"),null, null);
+                        0, rs.getInt("quantidade"),null, null, null);
                 
                 list.add(pl);
 

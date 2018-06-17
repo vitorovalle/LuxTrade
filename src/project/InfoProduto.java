@@ -284,7 +284,7 @@ public class InfoProduto extends javax.swing.JFrame {
         else{
             int qty = Integer.parseInt(this.productQtyField.getText());
             ProductList p = new ProductList(this.productInfoMarca.getText(), this.productInfoModelo.getText(), qty*Integer.parseInt(this.productInfoPreco.getText()), 
-                                                Integer.parseInt(this.productQtyField.getText()), null, null);
+                                                Integer.parseInt(this.productQtyField.getText()), null, null, null);
             itemCarrinho.add(p);
             JOptionPane.showMessageDialog(null, "Produto adicionado ao carrinho!");
    

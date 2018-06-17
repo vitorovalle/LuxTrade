@@ -55,6 +55,25 @@ public class AdminPanel extends javax.swing.JFrame {
         controleEstoqueBtn = new javax.swing.JButton();
         faturamentoBtn = new javax.swing.JButton();
         cardAdminParentLayout = new javax.swing.JPanel();
+        controlaEstoquePanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        controlaEstoqueTable = new javax.swing.JTable();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        modeloAddCampo = new javax.swing.JTextField();
+        categoria2ComboBox = new javax.swing.JComboBox<>();
+        atualizaEstoqueBtn = new javax.swing.JButton();
+        removerEstoqueBtn = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        modeloDelCampo = new javax.swing.JTextField();
+        categoria3ComboBox = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
+        atualizaQtdeCampo = new javax.swing.JTextField();
+        faturamentoPanel = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        faturamentoTable = new javax.swing.JTable();
+        apagarFaturamentoBtn = new javax.swing.JButton();
         atualizarPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -75,25 +94,10 @@ public class AdminPanel extends javax.swing.JFrame {
         imagemSelecionadaBtn = new javax.swing.JButton();
         precoCampo = new javax.swing.JTextField();
         atualizar2Btn = new javax.swing.JButton();
-        controlaEstoquePanel = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        controlaEstoqueTable = new javax.swing.JTable();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        modeloAddCampo = new javax.swing.JTextField();
-        categoria2ComboBox = new javax.swing.JComboBox<>();
-        atualizaEstoqueBtn = new javax.swing.JButton();
-        removerEstoqueBtn = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        modeloDelCampo = new javax.swing.JTextField();
-        categoria3ComboBox = new javax.swing.JComboBox<>();
-        jLabel14 = new javax.swing.JLabel();
-        atualizaQtdeCampo = new javax.swing.JTextField();
-        faturamentoPanel = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        faturamentoTable = new javax.swing.JTable();
-        apagarFaturamentoBtn = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        precoAquisicaoCampo = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        notaProcelCampo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -268,157 +272,6 @@ public class AdminPanel extends javax.swing.JFrame {
 
         cardAdminParentLayout.setBackground(new java.awt.Color(255, 255, 255));
         cardAdminParentLayout.setLayout(new java.awt.CardLayout());
-
-        atualizarPanel.setBackground(new java.awt.Color(255, 255, 255));
-        atualizarPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(25, 25, 112));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Informações do Produto");
-        atualizarPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 24, 1200, -1));
-
-        jSeparator1.setBackground(new java.awt.Color(25, 25, 112));
-        jSeparator1.setForeground(new java.awt.Color(25, 25, 112));
-        jSeparator1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jSeparator1.setOpaque(true);
-        jSeparator1.setPreferredSize(new java.awt.Dimension(0, 1));
-        atualizarPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 51, 200, -1));
-
-        jLabel4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(25, 25, 112));
-        jLabel4.setText("Marca :");
-        atualizarPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 104, -1));
-
-        marcaCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        marcaCampo.setForeground(new java.awt.Color(25, 25, 112));
-        marcaCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
-        marcaCampo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaCampoActionPerformed(evt);
-            }
-        });
-        atualizarPanel.add(marcaCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 362, -1));
-
-        modeloCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        modeloCampo.setForeground(new java.awt.Color(25, 25, 112));
-        modeloCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
-        modeloCampo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modeloCampoActionPerformed(evt);
-            }
-        });
-        atualizarPanel.add(modeloCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 362, -1));
-
-        jLabel5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(25, 25, 112));
-        jLabel5.setText("Modelo :");
-        jLabel5.setToolTipText("");
-        atualizarPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 104, -1));
-
-        qtdeCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        qtdeCampo.setForeground(new java.awt.Color(25, 25, 112));
-        qtdeCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
-        qtdeCampo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                qtdeCampoActionPerformed(evt);
-            }
-        });
-        atualizarPanel.add(qtdeCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 110, -1));
-
-        jLabel6.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(25, 25, 112));
-        jLabel6.setText("Categoria :");
-        jLabel6.setToolTipText("");
-        atualizarPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 104, -1));
-
-        localImagemCampo.setEditable(false);
-        localImagemCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        localImagemCampo.setForeground(new java.awt.Color(25, 25, 112));
-        localImagemCampo.setText("Escolha a imagem :");
-        localImagemCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
-        localImagemCampo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                localImagemCampoActionPerformed(evt);
-            }
-        });
-        atualizarPanel.add(localImagemCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 210, 30));
-
-        jLabel7.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(25, 25, 112));
-        jLabel7.setText("Preço :");
-        jLabel7.setToolTipText("");
-        atualizarPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 104, -1));
-
-        jLabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(25, 25, 112));
-        jLabel8.setText("Quantidade :");
-        atualizarPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 104, -1));
-
-        jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(25, 25, 112));
-        jLabel9.setText("Descrição do produto :");
-        jLabel9.setToolTipText("");
-        atualizarPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 170, -1));
-
-        categoriaComboBox.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        categoriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iluminação", "Hidráulica", "Eletro" }));
-        atualizarPanel.add(categoriaComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
-
-        descricaoCampo.setColumns(20);
-        descricaoCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        descricaoCampo.setLineWrap(true);
-        descricaoCampo.setRows(5);
-        descricaoCampo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 77, 64), 1, true));
-        jScrollPane1.setViewportView(descricaoCampo);
-
-        atualizarPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 370, 190));
-
-        imagemSelecionadaCampo.setFont(new java.awt.Font("Calibri", 0, 11)); // NOI18N
-        imagemSelecionadaCampo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imagemSelecionadaCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Image_100px.png"))); // NOI18N
-        imagemSelecionadaCampo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 77, 64), 1, true));
-        imagemSelecionadaCampo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        atualizarPanel.add(imagemSelecionadaCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 100, 230, 210));
-
-        imagemSelecionadaBtn.setBackground(new java.awt.Color(25, 25, 112));
-        imagemSelecionadaBtn.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        imagemSelecionadaBtn.setForeground(new java.awt.Color(255, 255, 255));
-        imagemSelecionadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Camera_20px.png"))); // NOI18N
-        imagemSelecionadaBtn.setBorder(null);
-        imagemSelecionadaBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        imagemSelecionadaBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                imagemSelecionadaBtnActionPerformed(evt);
-            }
-        });
-        atualizarPanel.add(imagemSelecionadaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 340, 50, 30));
-
-        precoCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        precoCampo.setForeground(new java.awt.Color(25, 25, 112));
-        precoCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
-        precoCampo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                precoCampoActionPerformed(evt);
-            }
-        });
-        atualizarPanel.add(precoCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 180, -1));
-
-        atualizar2Btn.setBackground(new java.awt.Color(25, 25, 112));
-        atualizar2Btn.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
-        atualizar2Btn.setForeground(new java.awt.Color(255, 255, 255));
-        atualizar2Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Database_24px.png"))); // NOI18N
-        atualizar2Btn.setText("Atualizar");
-        atualizar2Btn.setBorder(null);
-        atualizar2Btn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        atualizar2Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                atualizar2BtnActionPerformed(evt);
-            }
-        });
-        atualizarPanel.add(atualizar2Btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 460, 130, 50));
-
-        cardAdminParentLayout.add(atualizarPanel, "card3");
 
         controlaEstoquePanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -612,6 +465,178 @@ public class AdminPanel extends javax.swing.JFrame {
         );
 
         cardAdminParentLayout.add(faturamentoPanel, "card2");
+
+        atualizarPanel.setBackground(new java.awt.Color(255, 255, 255));
+        atualizarPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Informações do Produto");
+        atualizarPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 24, 1200, -1));
+
+        jSeparator1.setBackground(new java.awt.Color(25, 25, 112));
+        jSeparator1.setForeground(new java.awt.Color(25, 25, 112));
+        jSeparator1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jSeparator1.setOpaque(true);
+        jSeparator1.setPreferredSize(new java.awt.Dimension(0, 1));
+        atualizarPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 51, 200, -1));
+
+        jLabel4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel4.setText("Marca :");
+        atualizarPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 104, 50));
+
+        marcaCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        marcaCampo.setForeground(new java.awt.Color(25, 25, 112));
+        marcaCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
+        marcaCampo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                marcaCampoActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(marcaCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 79, 362, 30));
+
+        modeloCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        modeloCampo.setForeground(new java.awt.Color(25, 25, 112));
+        modeloCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
+        modeloCampo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modeloCampoActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(modeloCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 119, 362, 30));
+
+        jLabel5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel5.setText("Modelo :");
+        jLabel5.setToolTipText("");
+        atualizarPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 104, 50));
+
+        qtdeCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        qtdeCampo.setForeground(new java.awt.Color(25, 25, 112));
+        qtdeCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
+        qtdeCampo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qtdeCampoActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(qtdeCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 199, 110, 30));
+
+        jLabel6.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel6.setText("Categoria :");
+        jLabel6.setToolTipText("");
+        atualizarPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 104, -1));
+
+        localImagemCampo.setEditable(false);
+        localImagemCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        localImagemCampo.setForeground(new java.awt.Color(25, 25, 112));
+        localImagemCampo.setText("Escolha a imagem :");
+        localImagemCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
+        localImagemCampo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                localImagemCampoActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(localImagemCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 210, 30));
+
+        jLabel7.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel7.setText("Preço de Venda :");
+        jLabel7.setToolTipText("");
+        atualizarPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 104, 50));
+
+        jLabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel8.setText("Quantidade :");
+        atualizarPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 104, 50));
+
+        jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel9.setText("Descrição do produto :");
+        jLabel9.setToolTipText("");
+        atualizarPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 170, -1));
+
+        categoriaComboBox.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        categoriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iluminação", "Hidráulica", "Eletro" }));
+        atualizarPanel.add(categoriaComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
+
+        descricaoCampo.setColumns(20);
+        descricaoCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        descricaoCampo.setLineWrap(true);
+        descricaoCampo.setRows(5);
+        descricaoCampo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 77, 64), 1, true));
+        jScrollPane1.setViewportView(descricaoCampo);
+
+        atualizarPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 401, 370, 170));
+
+        imagemSelecionadaCampo.setFont(new java.awt.Font("Calibri", 0, 11)); // NOI18N
+        imagemSelecionadaCampo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imagemSelecionadaCampo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Image_100px.png"))); // NOI18N
+        imagemSelecionadaCampo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 77, 64), 1, true));
+        imagemSelecionadaCampo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        atualizarPanel.add(imagemSelecionadaCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 100, 230, 210));
+
+        imagemSelecionadaBtn.setBackground(new java.awt.Color(25, 25, 112));
+        imagemSelecionadaBtn.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        imagemSelecionadaBtn.setForeground(new java.awt.Color(255, 255, 255));
+        imagemSelecionadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Camera_20px.png"))); // NOI18N
+        imagemSelecionadaBtn.setBorder(null);
+        imagemSelecionadaBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        imagemSelecionadaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                imagemSelecionadaBtnActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(imagemSelecionadaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 340, 50, 30));
+
+        precoCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        precoCampo.setForeground(new java.awt.Color(25, 25, 112));
+        precoCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
+        precoCampo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precoCampoActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(precoCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 159, 180, 30));
+
+        atualizar2Btn.setBackground(new java.awt.Color(25, 25, 112));
+        atualizar2Btn.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
+        atualizar2Btn.setForeground(new java.awt.Color(255, 255, 255));
+        atualizar2Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Add_Database_24px.png"))); // NOI18N
+        atualizar2Btn.setText("Atualizar");
+        atualizar2Btn.setBorder(null);
+        atualizar2Btn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        atualizar2Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atualizar2BtnActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(atualizar2Btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 460, 130, 50));
+
+        jLabel15.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel15.setText("Preço de Aquisição :");
+        atualizarPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, -1, 50));
+
+        precoAquisicaoCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        precoAquisicaoCampo.setForeground(new java.awt.Color(25, 25, 112));
+        precoAquisicaoCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
+        precoAquisicaoCampo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precoAquisicaoCampoActionPerformed(evt);
+            }
+        });
+        atualizarPanel.add(precoAquisicaoCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 220, 30));
+
+        jLabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(25, 25, 112));
+        jLabel16.setText("Nota Procel :");
+        atualizarPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
+        atualizarPanel.add(notaProcelCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 220, 30));
+
+        cardAdminParentLayout.add(atualizarPanel, "card3");
 
         jPanel3.add(cardAdminParentLayout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1200, 600));
 
@@ -833,18 +858,21 @@ public class AdminPanel extends javax.swing.JFrame {
             if(categoriaComboBox.getSelectedItem().equals("Hidráulica")){
             if(!path.equals(""))
                 HidraulicaDAO.lancarHidraulica(marcaCampo.getText(), modeloCampo.getText(), Integer.parseInt(precoCampo.getText()), 
-                        Integer.parseInt(qtdeCampo.getText()), descricaoCampo.getText(), path);
+                        Integer.parseInt(qtdeCampo.getText()), descricaoCampo.getText(), path, Integer.parseInt(precoAquisicaoCampo.getText()),
+                        notaProcelCampo.getText());
         }
         
         else if(categoriaComboBox.getSelectedItem().equals("Iluminação")){
             if(!path.equals(""))
                 IluminacaoDAO.lancarIluminacao(marcaCampo.getText(), modeloCampo.getText(), Integer.parseInt(precoCampo.getText()), 
-                        Integer.parseInt(qtdeCampo.getText()), descricaoCampo.getText(), path);
+                        Integer.parseInt(qtdeCampo.getText()), descricaoCampo.getText(), path, Integer.parseInt(precoAquisicaoCampo.getText()),
+                        notaProcelCampo.getText());
         }
         else if(categoriaComboBox.getSelectedItem().equals("Eletro")){
             if(!path.equals(""))
                 EletroDAO.lancarEletro(marcaCampo.getText(), modeloCampo.getText(), Integer.parseInt(precoCampo.getText()), 
-                        Integer.parseInt(qtdeCampo.getText()), descricaoCampo.getText(), path);
+                        Integer.parseInt(qtdeCampo.getText()), descricaoCampo.getText(), path, Integer.parseInt(precoAquisicaoCampo.getText()),
+                        notaProcelCampo.getText());
         }
         
         marcaCampo.setText("");
@@ -853,6 +881,8 @@ public class AdminPanel extends javax.swing.JFrame {
         precoCampo.setText("");
         descricaoCampo.setText("");
         localImagemCampo.setText("");
+        precoAquisicaoCampo.setText("");
+        notaProcelCampo.setText("");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
             marcaCampo.setText("");
@@ -861,6 +891,8 @@ public class AdminPanel extends javax.swing.JFrame {
             precoCampo.setText("");
             descricaoCampo.setText("");
             localImagemCampo.setText("");
+            precoAquisicaoCampo.setText("");
+            notaProcelCampo.setText("");
         }
 
 
@@ -934,6 +966,10 @@ public class AdminPanel extends javax.swing.JFrame {
         FaturamentoDAO.apagarFatura();
     }//GEN-LAST:event_apagarFaturamentoBtnActionPerformed
 
+    private void precoAquisicaoCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precoAquisicaoCampoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precoAquisicaoCampoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton apagarFaturamentoBtn;
@@ -961,6 +997,8 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -981,6 +1019,8 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JTextField modeloAddCampo;
     private javax.swing.JTextField modeloCampo;
     private javax.swing.JTextField modeloDelCampo;
+    private javax.swing.JTextField notaProcelCampo;
+    private javax.swing.JTextField precoAquisicaoCampo;
     private javax.swing.JTextField precoCampo;
     private javax.swing.JTextField qtdeCampo;
     private javax.swing.JButton removerEstoqueBtn;

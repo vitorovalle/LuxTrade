@@ -36,7 +36,7 @@ public class Busca {
             while(rs.next()){
                 pl = new ProductList(rs.getString("marca"),rs.getString("modelo"),
                         rs.getInt("preco"),rs.getInt("quantidade"),rs.getString("descricao"),
-                        rs.getString("imagem"));
+                        rs.getString("imagem"),rs.getString("notaprocel"));
                 iluminacao++;
                 
                 list.add(pl);
@@ -54,7 +54,7 @@ public class Busca {
             while(rs.next()){
                 gl = new ProductList(rs.getString("marca"),rs.getString("modelo"),
                         rs.getInt("preco"),rs.getInt("quantidade"),rs.getString("descricao"),
-                        rs.getString("imagem"));
+                        rs.getString("imagem"),rs.getString("notaprocel"));
                 hidraulica++;
                 list.add(gl);
 
@@ -71,7 +71,7 @@ public class Busca {
             while(rs.next()){
                 kl = new ProductList(rs.getString("marca"),rs.getString("modelo"),
                         rs.getInt("preco"),rs.getInt("quantidade"),rs.getString("descricao"),
-                        rs.getString("imagem"));
+                        rs.getString("imagem"),rs.getString("notaprocel"));
                 eletro++;
                 list.add(kl);
 
