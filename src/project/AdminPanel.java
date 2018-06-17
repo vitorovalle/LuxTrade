@@ -19,6 +19,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import static project.Principal.total;
 
+
+
 /**
  *
  * @author Void
@@ -28,6 +30,8 @@ public class AdminPanel extends javax.swing.JFrame {
     /**
      * Creates new form AdminPanel
      */
+    static String tot;
+    static int total;
     boolean imageChooser = false;
     String path;
     
@@ -74,6 +78,8 @@ public class AdminPanel extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         faturamentoTable = new javax.swing.JTable();
         apagarFaturamentoBtn = new javax.swing.JButton();
+        totalLabel = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         atualizarPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -445,6 +451,11 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
 
+        totalLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        jLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel17.setText("Faturamento total :");
+
         javax.swing.GroupLayout faturamentoPanelLayout = new javax.swing.GroupLayout(faturamentoPanel);
         faturamentoPanel.setLayout(faturamentoPanelLayout);
         faturamentoPanelLayout.setHorizontalGroup(
@@ -453,15 +464,27 @@ public class AdminPanel extends javax.swing.JFrame {
             .addGroup(faturamentoPanelLayout.createSequentialGroup()
                 .addGap(411, 411, 411)
                 .addComponent(apagarFaturamentoBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(totalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
         faturamentoPanelLayout.setVerticalGroup(
             faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(faturamentoPanelLayout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(apagarFaturamentoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(faturamentoPanelLayout.createSequentialGroup()
+                        .addGap(0, 30, Short.MAX_VALUE)
+                        .addComponent(apagarFaturamentoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))
+                    .addGroup(faturamentoPanelLayout.createSequentialGroup()
+                        .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(totalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         cardAdminParentLayout.add(faturamentoPanel, "card2");
@@ -661,6 +684,7 @@ public class AdminPanel extends javax.swing.JFrame {
             cardAdminParentLayout.repaint();
             cardAdminParentLayout.revalidate();
             
+            
             DefaultTableModel model =  (DefaultTableModel) faturamentoTable.getModel();
             model.setRowCount(0);
          
@@ -676,7 +700,12 @@ public class AdminPanel extends javax.swing.JFrame {
             
             model.addRow(data);
             faturamentoTable.setRowHeight(20);
+            
+            int Soma = Integer.parseInt(faturamentoTable.getValueAt(i, 2)+"");
+            total = total + Soma;
         }
+        
+        totalLabel.setText(String.valueOf(total));
     }//GEN-LAST:event_faturamentoBtnActionPerformed
 
     private void faturamentoBtnMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_faturamentoBtnMouseReleased
@@ -999,6 +1028,7 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1024,5 +1054,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JTextField precoCampo;
     private javax.swing.JTextField qtdeCampo;
     private javax.swing.JButton removerEstoqueBtn;
+    private javax.swing.JLabel totalLabel;
     // End of variables declaration//GEN-END:variables
 }

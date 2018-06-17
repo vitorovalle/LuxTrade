@@ -7,6 +7,7 @@ package project;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.ImageIcon;
@@ -1997,7 +1998,9 @@ public class Principal extends javax.swing.JFrame {
 
         }
         else{
-            Date date = new Date();
+            String pattern = "dd-MM-yyyy";
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+            String date = simpleDateFormat.format(new Date());
             JFrame da = new EnderecoEntrega(logger, Integer.parseInt(contaLabel.getText()), date.toString());
             da.setVisible(true);
         }
@@ -2123,7 +2126,7 @@ public class Principal extends javax.swing.JFrame {
         Busca.eletro=0;
         
         ArrayList<ProductList> list = Busca.buscaGeral(barraBusca.getText());
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[7];
         int i, j, k;
         
         
@@ -2145,6 +2148,7 @@ public class Principal extends javax.swing.JFrame {
             buscaTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
             buscaTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
             buscaTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+            buscaTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
 
 
             model.setRowCount(0);
@@ -2153,32 +2157,34 @@ public class Principal extends javax.swing.JFrame {
                 rowData[1] = list.get(i).getModelo();
                 rowData[2] = list.get(i).getPreco();
                 rowData[3] = list.get(i).getQuantidade();
-                rowData[4] = list.get(i).getDescricao();
+                rowData[4] = list.get(i).getNotaProcel();
+                rowData[5] = list.get(i).getDescricao();
                 String temp = list.get(i).getImagem();
                 ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/iluminacao/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
-                rowData[5] = ii;
+                rowData[6] = ii;
                 model.addRow(rowData);
                 buscaTable.setRowHeight(150);
-                buscaTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+                buscaTable.getColumnModel().getColumn(6).setPreferredWidth(150);
             }
             for(k=i; k<Busca.hidraulica+Busca.iluminacao; k++){
                 rowData[0] = list.get(k).getMarca();
                 rowData[1] = list.get(k).getModelo();
                 rowData[2] = list.get(k).getPreco();
                 rowData[3] = list.get(k).getQuantidade();
-                rowData[4] = list.get(k).getDescricao();
+                rowData[4] = list.get(k).getNotaProcel();
+                rowData[5] = list.get(k).getDescricao();
                 String temp = list.get(k).getImagem();
                 ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/hidraulica/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
-                rowData[5] = ii;
+                rowData[6] = ii;
                 model.addRow(rowData);
                 buscaTable.setRowHeight(150);
-                buscaTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+                buscaTable.getColumnModel().getColumn(6).setPreferredWidth(150);
             }
             System.out.println();
             for(j=k; j<Busca.hidraulica+Busca.iluminacao+Busca.eletro; j++){
@@ -2186,16 +2192,17 @@ public class Principal extends javax.swing.JFrame {
                 rowData[1] = list.get(j).getModelo();
                 rowData[2] = list.get(j).getPreco();
                 rowData[3] = list.get(j).getQuantidade();
-                rowData[4] = list.get(j).getDescricao();
+                rowData[4] = list.get(j).getNotaProcel();
+                rowData[5] = list.get(j).getDescricao();
                 String temp = list.get(j).getImagem();
                 ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/eletro/"+temp));
                 Image resizedImage = ii.getImage();
                 ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
 
-                rowData[5] = ii;
+                rowData[6] = ii;
                 model.addRow(rowData);
                 buscaTable.setRowHeight(150);
-                buscaTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+                buscaTable.getColumnModel().getColumn(6).setPreferredWidth(150);
             }
         }
         
