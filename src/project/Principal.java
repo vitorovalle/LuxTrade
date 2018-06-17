@@ -37,7 +37,7 @@ public class Principal extends javax.swing.JFrame {
         
         ArrayList<ProductList> list = IluminacaoDAO.populaConteudo();
         
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[7];
         
         DefaultTableModel model =  (DefaultTableModel) principalTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -47,6 +47,7 @@ public class Principal extends javax.swing.JFrame {
         principalTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        principalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
@@ -56,16 +57,17 @@ public class Principal extends javax.swing.JFrame {
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/iluminacao/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             principalTable.setRowHeight(150);
-            principalTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            principalTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         
         list.clear();
@@ -78,22 +80,24 @@ public class Principal extends javax.swing.JFrame {
         principalTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        principalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getMarca();
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/hidraulica/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             principalTable.setRowHeight(150);
-            principalTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            principalTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         list.clear();
         
@@ -105,22 +109,24 @@ public class Principal extends javax.swing.JFrame {
         principalTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        principalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getMarca();
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/eletro/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             principalTable.setRowHeight(150);
-            principalTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            principalTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         
         
@@ -586,15 +592,15 @@ public class Principal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Marca", "Modelo", "Preço", "Estoque", "Descrição", "Imagem"
+                "Marca", "Modelo", "Preço", "Estoque", "Nota Procel", "Descrição", "Imagem"
             }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -637,15 +643,15 @@ public class Principal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Marca", "Modelo", "Preco", "Estoque", "Descrição", "Imagem"
+                "Marca", "Modelo", "Preco", "Estoque", "Nota Procel", "Descrição", "Imagem"
             }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -690,15 +696,15 @@ public class Principal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Marca", "Modelo", "Preço", "Estoque", "Descrição", "Imagem"
+                "Marca", "Modelo", "Preço", "Estoque", "Nota Procel", "Descrição", "Imagem"
             }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -817,7 +823,7 @@ public class Principal extends javax.swing.JFrame {
         carrinhoPanel.setLayout(carrinhoPanelLayout);
         carrinhoPanelLayout.setHorizontalGroup(
             carrinhoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1207, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
             .addGroup(carrinhoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -842,15 +848,15 @@ public class Principal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Marca", "Modelo", "Preço", "Estoque", "Descrição", "Imagem"
+                "Marca", "Modelo", "Preço", "Estoque", "Nota Procel", "Descrição", "Imagem"
             }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -895,15 +901,15 @@ public class Principal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Marca", "Modelo", "Preço", "Estoque", "Descrição", "Imagem"
+                "Marca", "Modelo", "Preço", "Estoque", "Nota Procel", "Descrição", "Imagem"
             }
         ) {
             Class[] types = new Class[]{
                 java.lang.String.class, java.lang.String.class, java.lang.Integer.class,
-                java.lang.Integer.class, java.lang.String.class, javax.swing.Icon.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, javax.swing.Icon.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -1357,7 +1363,7 @@ public class Principal extends javax.swing.JFrame {
         
         ArrayList<ProductList> list = IluminacaoDAO.populaConteudo();
         
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[7];
         
         DefaultTableModel model =  (DefaultTableModel) principalTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -1367,6 +1373,7 @@ public class Principal extends javax.swing.JFrame {
         principalTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        principalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
@@ -1376,16 +1383,17 @@ public class Principal extends javax.swing.JFrame {
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/iluminacao/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             principalTable.setRowHeight(150);
-            principalTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            principalTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         
         list.clear();
@@ -1398,22 +1406,24 @@ public class Principal extends javax.swing.JFrame {
         principalTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        principalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getMarca();
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/hidraulica/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             principalTable.setRowHeight(150);
-            principalTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            principalTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         list.clear();
         
@@ -1425,22 +1435,24 @@ public class Principal extends javax.swing.JFrame {
         principalTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         principalTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        principalTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
         
         for(int i=0; i<list.size(); i++){
             rowData[0] = list.get(i).getMarca();
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/eletro/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             principalTable.setRowHeight(150);
-            principalTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            principalTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         
         
@@ -1503,7 +1515,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         InfoProduto.seletorCategoria = "iluminacao";
         ArrayList<ProductList> list = IluminacaoDAO.populaTabela();
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[7];
         
         DefaultTableModel model =  (DefaultTableModel) iluminacaoTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -1513,6 +1525,7 @@ public class Principal extends javax.swing.JFrame {
         iluminacaoTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         iluminacaoTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         iluminacaoTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        iluminacaoTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
@@ -1522,16 +1535,17 @@ public class Principal extends javax.swing.JFrame {
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/iluminacao/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             iluminacaoTable.setRowHeight(150);
-            iluminacaoTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            iluminacaoTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
     }//GEN-LAST:event_iluminacaoBtnActionPerformed
 
@@ -1659,7 +1673,7 @@ public class Principal extends javax.swing.JFrame {
         InfoProduto.seletorCategoria = "hidraulica";
         ArrayList<ProductList> list = HidraulicaDAO.populaTabela();
         String[] columnName = {};
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[7];
         
         DefaultTableModel model =  (DefaultTableModel) hidraulicaTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -1669,6 +1683,7 @@ public class Principal extends javax.swing.JFrame {
         hidraulicaTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         hidraulicaTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         hidraulicaTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        hidraulicaTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
@@ -1678,16 +1693,17 @@ public class Principal extends javax.swing.JFrame {
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/hidraulica/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             hidraulicaTable.setRowHeight(150);
-            hidraulicaTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            hidraulicaTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         
     }//GEN-LAST:event_hidraulicaBtnActionPerformed
@@ -1724,7 +1740,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         InfoProduto.seletorCategoria = "eletro";
         ArrayList<ProductList> list = EletroDAO.populaTabela();
-        Object rowData[] = new Object[6];
+        Object rowData[] = new Object[7];
         
         DefaultTableModel model =  (DefaultTableModel) eletroTable.getModel();
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -1734,6 +1750,7 @@ public class Principal extends javax.swing.JFrame {
         eletroTable.getColumnModel().getColumn(2).setCellRenderer( centerRenderer );
         eletroTable.getColumnModel().getColumn(3).setCellRenderer( centerRenderer );
         eletroTable.getColumnModel().getColumn(4).setCellRenderer( centerRenderer );
+        eletroTable.getColumnModel().getColumn(5).setCellRenderer( centerRenderer );
 
        
         model.setRowCount(0); //To clear mobileTable
@@ -1743,16 +1760,17 @@ public class Principal extends javax.swing.JFrame {
             rowData[1] = list.get(i).getModelo();
             rowData[2] = list.get(i).getPreco();
             rowData[3] = list.get(i).getQuantidade();
-            rowData[4] = list.get(i).getDescricao();
+            rowData[4] = list.get(i).getNotaProcel();
+            rowData[5] = list.get(i).getDescricao();
             String temp = list.get(i).getImagem();
             ImageIcon ii = new ImageIcon(getClass().getResource("/produtos/eletro/"+temp));
             Image resizedImage = ii.getImage();
             ii = new ImageIcon(resizedImage.getScaledInstance(160, 160, Image.SCALE_SMOOTH));
             
-            rowData[5] = ii;
+            rowData[6] = ii;
             model.addRow(rowData);
             eletroTable.setRowHeight(150);
-            eletroTable.getColumnModel().getColumn(5).setPreferredWidth(150);
+            eletroTable.getColumnModel().getColumn(6).setPreferredWidth(150);
         }
         
     }//GEN-LAST:event_eletroBtnActionPerformed
@@ -1956,8 +1974,8 @@ public class Principal extends javax.swing.JFrame {
         String modelo = tm.getValueAt(selectedRow, 1).toString();
         String preco = tm.getValueAt(selectedRow, 2).toString();
         String quantidade = tm.getValueAt(selectedRow, 3).toString();
-        String descricao = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon imagem = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String descricao = tm.getValueAt(selectedRow, 5).toString();
+        ImageIcon imagem = (ImageIcon) tm.getValueAt(selectedRow, 6);
         
         pi.productInfoMarca.setText(marca);
         pi.productInfoModelo.setText(modelo);
@@ -2001,8 +2019,8 @@ public class Principal extends javax.swing.JFrame {
         String model = tm.getValueAt(selectedRow, 1).toString();
         String price = tm.getValueAt(selectedRow, 2).toString();
         String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 5).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 6);
         
         pi.productInfoMarca.setText(brand);
         pi.productInfoModelo.setText(model);
@@ -2024,8 +2042,8 @@ public class Principal extends javax.swing.JFrame {
         String model = tm.getValueAt(selectedRow, 1).toString();
         String price = tm.getValueAt(selectedRow, 2).toString();
         String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 5).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 6);
         
         pi.productInfoMarca.setText(brand);
         pi.productInfoModelo.setText(model);
@@ -2056,8 +2074,8 @@ public class Principal extends javax.swing.JFrame {
         String model = tm.getValueAt(selectedRow, 1).toString();
         String price = tm.getValueAt(selectedRow, 2).toString();
         String stock = tm.getValueAt(selectedRow, 3).toString();
-        String feature = tm.getValueAt(selectedRow, 4).toString();
-        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 5);
+        String feature = tm.getValueAt(selectedRow, 5).toString();
+        ImageIcon img = (ImageIcon) tm.getValueAt(selectedRow, 6);
         
         pi.productInfoMarca.setText(brand);
         pi.productInfoModelo.setText(model);
