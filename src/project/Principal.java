@@ -1998,7 +1998,7 @@ public class Principal extends javax.swing.JFrame {
 
         }
         else{
-            String pattern = "dd-MM-yyyy";
+            String pattern = "dd/MM/yyyy";
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
             String date = simpleDateFormat.format(new Date());
             JFrame da = new EnderecoEntrega(logger, Integer.parseInt(contaLabel.getText()), date.toString());

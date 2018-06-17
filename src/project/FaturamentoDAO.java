@@ -61,6 +61,28 @@ public class FaturamentoDAO {
         return clientes;
     }
     
+    public static ArrayList<Fatura> faturadata(String datainicial, String datafinal){
+        ArrayList<Fatura> clientes = new ArrayList<>();
+      
+        try {
+            Connection con = DriverManager.getConnection("jdbc:sqlite:DBs/faturamentoDB.db");
+            Statement ps = con.createStatement();
+            ResultSet rs = ps.executeQuery("SELECT id, usuario_nome, valor, data FROM fatura WHERE data BETWEEN "+datainicial+" AND "+datafinal);
+            
+            Fatura pl;
+            
+            while(rs.next()){
+                pl = new Fatura(rs.getInt("id"),rs.getString("usuario_nome"),
+                        rs.getInt("valor"),rs.getString("data"));
+                clientes.add(pl);
+
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(HidraulicaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return clientes;
+    }
+    
     //Deleting billing log
     public static void apagarFatura(){
          try {

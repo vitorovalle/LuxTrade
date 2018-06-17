@@ -586,12 +586,30 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane2" alignment="0" pref="1200" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="411" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                           <Component id="apagarFaturamentoBtn" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel17" min="-2" pref="128" max="-2" attributes="0"/>
+                          <Component id="consultaDataBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel20" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="dataFinalCampo" pref="92" max="32767" attributes="0"/>
+                              <Component id="dataInicialCampo" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel17" max="32767" attributes="0"/>
+                              <Component id="jLabel19" max="32767" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Component id="totalLabel" min="-2" pref="85" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="trimestralLabel" max="32767" attributes="0"/>
+                              <Component id="totalLabel" pref="85" max="32767" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -600,17 +618,44 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jScrollPane2" min="-2" pref="493" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
-                                  <Component id="apagarFaturamentoBtn" min="-2" pref="42" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" attributes="0">
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="totalLabel" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="jLabel17" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="totalLabel" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel17" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="dataInicialCampo" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="trimestralLabel" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="dataFinalCampo" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="consultaDataBtn" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Component id="apagarFaturamentoBtn" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -674,7 +719,7 @@
                       <Color blue="0" green="0" red="ff" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Roboto" size="18" style="0"/>
+                      <Font name="Calibri" size="18" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -702,6 +747,64 @@
                       <Font name="Calibri" size="14" style="0"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Faturamento total :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="trimestralLabel">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel19">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Calibri" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Faturamento trimestral :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="consultaDataBtn">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="0" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Calibri" size="18" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Consultar por data"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultaDataBtnActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="dataInicialCampo">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Calibri" size="14" style="0"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="dataFinalCampo">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Calibri" size="14" style="0"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel18">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Calibri" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Data inicial :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel20">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Calibri" size="14" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Data final :"/>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
               </SubComponents>

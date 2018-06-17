@@ -80,6 +80,13 @@ public class AdminPanel extends javax.swing.JFrame {
         apagarFaturamentoBtn = new javax.swing.JButton();
         totalLabel = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        trimestralLabel = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        consultaDataBtn = new javax.swing.JButton();
+        dataInicialCampo = new javax.swing.JTextField();
+        dataFinalCampo = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         atualizarPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -440,7 +447,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jScrollPane2.setViewportView(faturamentoTable);
 
         apagarFaturamentoBtn.setBackground(new java.awt.Color(255, 0, 0));
-        apagarFaturamentoBtn.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        apagarFaturamentoBtn.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         apagarFaturamentoBtn.setForeground(new java.awt.Color(255, 255, 255));
         apagarFaturamentoBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Delete_24px.png"))); // NOI18N
         apagarFaturamentoBtn.setText("Apagar faturamento");
@@ -456,34 +463,91 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel17.setText("Faturamento total :");
 
+        jLabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel19.setText("Faturamento trimestral :");
+
+        consultaDataBtn.setBackground(new java.awt.Color(0, 0, 255));
+        consultaDataBtn.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        consultaDataBtn.setForeground(new java.awt.Color(255, 255, 255));
+        consultaDataBtn.setText("Consultar por data");
+        consultaDataBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultaDataBtnActionPerformed(evt);
+            }
+        });
+
+        dataInicialCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        dataFinalCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        jLabel18.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel18.setText("Data inicial :");
+
+        jLabel20.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel20.setText("Data final :");
+        jLabel20.setToolTipText("");
+
         javax.swing.GroupLayout faturamentoPanelLayout = new javax.swing.GroupLayout(faturamentoPanel);
         faturamentoPanel.setLayout(faturamentoPanelLayout);
         faturamentoPanelLayout.setHorizontalGroup(
             faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
             .addGroup(faturamentoPanelLayout.createSequentialGroup()
-                .addGap(411, 411, 411)
+                .addGap(98, 98, 98)
                 .addComponent(apagarFaturamentoBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(consultaDataBtn)
+                .addGap(18, 18, 18)
+                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(75, 75, 75)
+                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dataFinalCampo, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                    .addComponent(dataInicialCampo))
+                .addGap(27, 27, 27)
+                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26)
-                .addComponent(totalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(trimestralLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(totalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))
                 .addGap(33, 33, 33))
         );
         faturamentoPanelLayout.setVerticalGroup(
             faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(faturamentoPanelLayout.createSequentialGroup()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(faturamentoPanelLayout.createSequentialGroup()
-                        .addGap(0, 30, Short.MAX_VALUE)
-                        .addComponent(apagarFaturamentoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24))
-                    .addGroup(faturamentoPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(totalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(faturamentoPanelLayout.createSequentialGroup()
+                                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(totalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(dataInicialCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(trimestralLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(faturamentoPanelLayout.createSequentialGroup()
+                                        .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel19)
+                                            .addComponent(dataFinalCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 8, Short.MAX_VALUE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, faturamentoPanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel18)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel20)))
+                        .addGap(19, 19, 19))
+                    .addGroup(faturamentoPanelLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(consultaDataBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(apagarFaturamentoBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -999,6 +1063,38 @@ public class AdminPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_precoAquisicaoCampoActionPerformed
 
+    private void consultaDataBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaDataBtnActionPerformed
+        // TODO add your handling code here:
+            cardAdminParentLayout.removeAll();
+            cardAdminParentLayout.add(faturamentoPanel);
+            cardAdminParentLayout.repaint();
+            cardAdminParentLayout.revalidate();
+            
+            
+            DefaultTableModel model =  (DefaultTableModel) faturamentoTable.getModel();
+            model.setRowCount(0);
+            
+            String datainicial = dataInicialCampo.getText(); 
+            String datafinal = dataFinalCampo.getText();
+         
+            Object[] data = new Object[4];
+            ArrayList<Fatura> list = new ArrayList<>();
+            list = FaturamentoDAO.faturadata(datainicial, datafinal);
+        
+        for(int i=0; i<list.size(); i++){
+            data[0] = i+1;
+            data[1] = list.get(i).getUsuarioNome();
+            data[2] = list.get(i).getValor();
+            data[3] = list.get(i).getData();
+            
+            model.addRow(data);
+            faturamentoTable.setRowHeight(20);
+            
+            int Soma = Integer.parseInt(faturamentoTable.getValueAt(i, 2)+"");
+            total = total + Soma;
+        
+    }//GEN-LAST:event_consultaDataBtnActionPerformed
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton apagarFaturamentoBtn;
@@ -1011,9 +1107,12 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> categoria2ComboBox;
     private javax.swing.JComboBox<String> categoria3ComboBox;
     private javax.swing.JComboBox<String> categoriaComboBox;
+    private javax.swing.JButton consultaDataBtn;
     private javax.swing.JPanel controlaEstoquePanel;
     private javax.swing.JTable controlaEstoqueTable;
     private javax.swing.JButton controleEstoqueBtn;
+    private javax.swing.JTextField dataFinalCampo;
+    private javax.swing.JTextField dataInicialCampo;
     private javax.swing.JTextArea descricaoCampo;
     private javax.swing.JButton faturamentoBtn;
     private javax.swing.JPanel faturamentoPanel;
@@ -1029,7 +1128,10 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1055,5 +1157,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JTextField qtdeCampo;
     private javax.swing.JButton removerEstoqueBtn;
     private javax.swing.JLabel totalLabel;
+    private javax.swing.JLabel trimestralLabel;
     // End of variables declaration//GEN-END:variables
 }
