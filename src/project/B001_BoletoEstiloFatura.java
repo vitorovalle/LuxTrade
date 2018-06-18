@@ -148,7 +148,7 @@ public class B001_BoletoEstiloFatura {
 		// Instanciando um objeto "BoletoViewer", classe responsável pela
 		// geração do boleto bancário.
 		BoletoViewer boletoViewer = new BoletoViewer(boleto);
-		boletoViewer.setTemplate("templates/B001_BoletoEstiloFatura.pdf");
+		boletoViewer.setTemplate("boleto/B001_BoletoEstiloFatura.pdf");
 
 		// Gerando o arquivo. No caso o arquivo mencionado será salvo na mesma
 		// pasta do projeto. Outros exemplos:
