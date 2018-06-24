@@ -133,6 +133,8 @@ public class Principal extends javax.swing.JFrame {
         
     }
     
+
+    
     public void doPanelHideShow()
     {
        

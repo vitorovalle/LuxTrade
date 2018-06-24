@@ -464,7 +464,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel17.setText("Faturamento total :");
 
         jLabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel19.setText("Faturamento trimestral :");
+        jLabel19.setText("Lucro líquido :");
 
         consultaDataBtn.setBackground(new java.awt.Color(0, 0, 255));
         consultaDataBtn.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
