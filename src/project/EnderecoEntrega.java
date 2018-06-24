@@ -360,6 +360,63 @@ public class EnderecoEntrega extends javax.swing.JFrame {
 }
     }
     
+    public class DoExpressCheckoutPayment {
+        
+        public DoExpressCheckoutPayment() throws IOException {
+            
+        URL url = new URL("https://api-3t.sandbox.paypal.com/nvp");
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("POST");
+        con.setRequestProperty("application/x-www-form-urlencoded", "charset=utf-8");
+        con.setConnectTimeout(10000);
+        con.setReadTimeout(10000);
+        
+        Map<String,String> parameters = new HashMap<>();
+        parameters.put("USER","vitorovalle_api1.gmail.com");
+        parameters.put("PWD","5US83U9RYJ3Q5SBF");
+        parameters.put("SIGNATURE","AqXEa4qVWnSZ.Ss4MDQQAppYR5VHAu5MmytaCt9UEnDM7gtebbXu53-o");
+        
+        parameters.put("VERSION","114.0");
+        parameters.put("METHOD","DoExpressCheckoutPayment");
+        parameters.put("TOKEN","");
+        parameters.put("PAYERID","");
+        parameters.put("PAYMENTREQUEST_0_PAYMENTACTION","SALE");
+        parameters.put("PAYMENTREQUEST_0_AMT","22.00");
+        parameters.put("PAYMENTREQUEST_0_CURRENCYCODE","BRL");
+        parameters.put("PAYMENTREQUEST_0_ITEMAMT","22.00");
+        parameters.put("PAYMENTREQUEST_0_INVNUM","12345");
+        parameters.put("L_PAYMENTREQUEST_0_NAME0","Item A");
+        parameters.put("L_PAYMENTREQUEST_0_DESC0","Produto A – 110V");
+        parameters.put("L_PAYMENTREQUEST_0_AMT0","11.00");
+        parameters.put("L_PAYMENTREQUEST_0_QTY0","1");
+        parameters.put("L_PAYMENTREQUEST_0_ITEMAMT","11.00");
+        parameters.put("L_PAYMENTREQUEST_0_NAME1","Item B");
+        parameters.put("L_PAYMENTREQUEST_0_DESC1","Produto B – 220V");
+        parameters.put("L_PAYMENTREQUEST_0_AMT1","11.00");
+        parameters.put("L_PAYMENTREQUEST_0_QTY1","1");
+        
+        con.setDoOutput(true);
+        DataOutputStream out = new DataOutputStream(con.getOutputStream());
+        out.writeBytes(ParameterStringBuilder.getParamsString(parameters));
+        out.flush();
+        out.close();
+        
+        int status = con.getResponseCode();
+        BufferedReader in = new BufferedReader(
+        new InputStreamReader(con.getInputStream()));
+        String inputLineFinal;
+        StringBuffer content = new StringBuffer();
+        while ((inputLineFinal = in.readLine()) != null) {
+           content.append(inputLineFinal);
+            }
+        in.close();
+        con.disconnect();
+        
+        System.out.print(inputLineFinal);
+            
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
