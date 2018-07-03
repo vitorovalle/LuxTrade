@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 import static project.Principal.logger;
 import boleto.GeraBoleto;
+import com.paypal.core.rest.APIContext;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -294,7 +295,7 @@ public class EnderecoEntrega extends javax.swing.JFrame {
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
-       //SetExpressCheckout.SetExpressCheckout();
+       
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     public class SetExpressCheckout {
@@ -416,6 +417,7 @@ public class EnderecoEntrega extends javax.swing.JFrame {
             
         }
     }
+    
     
     /**
      * @param args the command line arguments
