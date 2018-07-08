@@ -12,7 +12,10 @@ import static project.Principal.logger;
 import boleto.GeraBoleto;
 import com.paypal.core.rest.APIContext;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -294,10 +297,45 @@ public class EnderecoEntrega extends javax.swing.JFrame {
     }//GEN-LAST:event_enderecoCampoActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-       
+
+        
+        
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
+    public class BotaoPaypal {
+        
+        public BotaoPaypal() throws IOException {
+        
+        String html = "<html>\n" +
+"<head>\n" +
+//"<title>Pay through PayPal: http://www.TestAccount.com</title>\n" +
+"</head>\n" +
+"<body onload=\"document.forms['paypalForm'].submit();\">\n" +
+"<form name=\"paypalForm\" action=\"https://www.sandbox.paypal.com/cgi-bin/webscr\" method=\"post\">\n" +
+" <input type=\"hidden\" name=\"cmd\" value=\"_xclick\" />\n" +
+" <input type=\"hidden\" name=\"business\" value=\"vitorovalle_api1.gmail.com\" />\n" +
+" <input type=\"hidden\" name=\"password\" value=\"5US83U9RYJ3Q5SBF\" />\n" +
+" <input type=\"hidden\" name=\"custom\" value=\"1123\" />\n" +
+" <input type=\"hidden\" name=\"item_name\" value=\"Computer-Laptop\" />\n" +
+" <input type=\"hidden\" name=\"amount\" value=\"30\"/>\n" +
+" <input type=\"hidden\" name=\"rm\" value=\"1\" />\n" +
+" <input type=\"hidden\" name=\"return\" value=\"http://localhost:8080\" />\n" +
+" <input type=\"hidden\" name=\"cancel_return\" value=\"http://localhost:8080\" />\n" +
+" <input type=\"hidden\" name=\"cert_id\" value=\"AqXEa4qVWnSZ.Ss4MDQQAppYR5VHAu5MmytaCt9UEnDM7gtebbXu53-o\" />\n" +
+"</form>\n" +
+"</body>\n" +
+"</html>";
+        
+        File f = new File ("C:\\paypal.html");
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter(f));
+        } catch (IOException ex) {
+            Logger.getLogger(EnderecoEntrega.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        }
+    }
+
+    
     public class SetExpressCheckout {
     
     public SetExpressCheckout() throws IOException {
