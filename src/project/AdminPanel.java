@@ -572,7 +572,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(25, 25, 112));
         jLabel4.setText("Marca :");
-        atualizarPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 104, 50));
+        atualizarPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 104, 50));
 
         marcaCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         marcaCampo.setForeground(new java.awt.Color(25, 25, 112));
@@ -598,7 +598,7 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(25, 25, 112));
         jLabel5.setText("Modelo :");
         jLabel5.setToolTipText("");
-        atualizarPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 104, 50));
+        atualizarPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 104, 50));
 
         qtdeCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         qtdeCampo.setForeground(new java.awt.Color(25, 25, 112));
@@ -608,13 +608,13 @@ public class AdminPanel extends javax.swing.JFrame {
                 qtdeCampoActionPerformed(evt);
             }
         });
-        atualizarPanel.add(qtdeCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 199, 110, 30));
+        atualizarPanel.add(qtdeCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 199, 360, 30));
 
         jLabel6.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(25, 25, 112));
         jLabel6.setText("Categoria :");
         jLabel6.setToolTipText("");
-        atualizarPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 104, -1));
+        atualizarPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 104, -1));
 
         localImagemCampo.setEditable(false);
         localImagemCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
@@ -637,13 +637,13 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(25, 25, 112));
         jLabel8.setText("Quantidade :");
-        atualizarPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 104, 50));
+        atualizarPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 104, 50));
 
         jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(25, 25, 112));
         jLabel9.setText("Descrição do produto :");
         jLabel9.setToolTipText("");
-        atualizarPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 170, -1));
+        atualizarPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 170, -1));
 
         categoriaComboBox.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         categoriaComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Iluminação", "Hidráulica", "Eletro" }));
@@ -686,7 +686,7 @@ public class AdminPanel extends javax.swing.JFrame {
                 precoCampoActionPerformed(evt);
             }
         });
-        atualizarPanel.add(precoCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 159, 180, 30));
+        atualizarPanel.add(precoCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 159, 360, 30));
 
         atualizar2Btn.setBackground(new java.awt.Color(25, 25, 112));
         atualizar2Btn.setFont(new java.awt.Font("Calibri", 0, 20)); // NOI18N
@@ -715,13 +715,17 @@ public class AdminPanel extends javax.swing.JFrame {
                 precoAquisicaoCampoActionPerformed(evt);
             }
         });
-        atualizarPanel.add(precoAquisicaoCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 220, 30));
+        atualizarPanel.add(precoAquisicaoCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 360, 30));
 
         jLabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(25, 25, 112));
         jLabel16.setText("Nota Procel :");
-        atualizarPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
-        atualizarPanel.add(notaProcelCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 220, 30));
+        atualizarPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, -1, -1));
+
+        notaProcelCampo.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        notaProcelCampo.setForeground(new java.awt.Color(25, 25, 112));
+        notaProcelCampo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 77, 64)));
+        atualizarPanel.add(notaProcelCampo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 360, 30));
 
         cardAdminParentLayout.add(atualizarPanel, "card3");
 
