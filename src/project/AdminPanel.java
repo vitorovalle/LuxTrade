@@ -81,7 +81,6 @@ public class AdminPanel extends javax.swing.JFrame {
         totalLabel = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         trimestralLabel = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         consultaDataBtn = new javax.swing.JButton();
         dataInicialCampo = new javax.swing.JTextField();
         dataFinalCampo = new javax.swing.JTextField();
@@ -463,9 +462,6 @@ public class AdminPanel extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel17.setText("Faturamento total :");
 
-        jLabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel19.setText("Lucro líquido :");
-
         consultaDataBtn.setBackground(new java.awt.Color(0, 0, 255));
         consultaDataBtn.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         consultaDataBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -506,9 +502,7 @@ public class AdminPanel extends javax.swing.JFrame {
                     .addComponent(dataFinalCampo, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
                     .addComponent(dataInicialCampo))
                 .addGap(27, 27, 27)
-                .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel17)
                 .addGap(26, 26, 26)
                 .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(trimestralLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -533,10 +527,8 @@ public class AdminPanel extends javax.swing.JFrame {
                                 .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(trimestralLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(faturamentoPanelLayout.createSequentialGroup()
-                                        .addGroup(faturamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel19)
-                                            .addComponent(dataFinalCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 8, Short.MAX_VALUE))))
+                                        .addComponent(dataFinalCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 1, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, faturamentoPanelLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel18)
@@ -1133,7 +1125,6 @@ public class AdminPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;

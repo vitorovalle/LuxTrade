@@ -601,10 +601,7 @@
                               <Component id="dataInicialCampo" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel17" max="32767" attributes="0"/>
-                              <Component id="jLabel19" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="trimestralLabel" max="32767" attributes="0"/>
@@ -634,11 +631,8 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="trimestralLabel" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="dataFinalCampo" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                                                  <Component id="dataFinalCampo" min="-2" pref="34" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -750,14 +744,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="trimestralLabel">
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel19">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Calibri" size="14" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Lucro l&#xed;quido :"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="consultaDataBtn">
                   <Properties>
